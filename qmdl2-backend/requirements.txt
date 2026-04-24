@@ -1,0 +1,25 @@
+# QMDL2 UE Log Decoder — Dependencies
+# =====================================
+
+# Web framework
+fastapi[standard]>=0.115.0
+
+# File upload handling
+python-multipart>=0.0.9
+
+# Environment variables from .env file
+python-dotenv>=1.0.0
+
+# SCAT: QMDL2 → PCAP decoder (Qualcomm diagnostic tool)
+# https://github.com/fgsect/scat
+signalcat>=1.5.0
+
+# Optional: faster CRC calculation for SCAT
+# Uncomment if you can build libscrc on your system:
+# signalcat[fastcrc]>=1.5.0
+
+# NOTE: tshark (Wireshark CLI) is a system dependency, not a pip package.
+# Install it separately:
+#   Ubuntu/Debian:  sudo apt install tshark
+#   macOS:          brew install wireshark
+#   Windows:        Install Wireshark (includes tshark)
